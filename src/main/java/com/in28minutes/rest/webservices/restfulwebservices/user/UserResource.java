@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
-import static org.springframework.hateaos.server.mvc.WebMvcLinkBuilder.*;
+//import static org.springframework.hateaos.server.mvc.WebMvcLinkBuilder.*;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -46,8 +46,8 @@ public class UserResource {
 	public EntityModel<User> retrieveUser(@PathVariable int id){
 		User user = new User();
 		EntityModel<User> entityModel = EntityModel.of(user);
-		WebMvcLinkBuilder link = linkTo(methodOn(this.getClass()).retrieveAllUsers());
-		entityModel.add(link.withRel("all-users"));
+		//WebMvcLinkBuilder link = linkTo(methodOn(this.getClass()).retrieveAllUsers());
+		//entityModel.add(link.withRel("all-users"));
 		return entityModel;
 	}
 	@PostMapping("/users")
